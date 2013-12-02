@@ -1,0 +1,12 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/javascripts/thirdparty/angular.min.js')
+    script(src='/javascripts/thirdparty/angular-resource.min.js')
+    script(src='/javascripts/thirdparty/ui-bootstrap.min.js')
+
+    script(src='/javascripts/MainController.js')
+  body(ng-app='instagram-feed')
+    block content
