@@ -1,14 +1,12 @@
-var karma = require('karma');
-
 module.exports = function (grunt) {
-
-    grunt.loadNpmTasks('grunt-contrib');
-
     grunt.initConfig({
-        builddir: 'build'
+        bower: {
+            install: {
+                install: true,
+                verbose: false
+            }
+        }
     });
-
-    grunt.registerTask('default', 'Default task', function() {
-       grunt.log.write('Logging some stuff...').ok();
-    });
+    grunt.loadNpmTasks('grunt-bower-task');
+    grunt.registerTask('default', ['bower']);
 }
