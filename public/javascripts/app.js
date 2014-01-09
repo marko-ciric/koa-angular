@@ -1,4 +1,6 @@
-var module = angular.module('instagram-feed', ['ngResource']);
+var module = angular.module('instagram-feed', ['ngResource', 'ngRoute']);
+
+module.
 
 module.factory('Users', ['$resource', function ($resource) {
     return $resource('/api/users', {id: '@id'});
