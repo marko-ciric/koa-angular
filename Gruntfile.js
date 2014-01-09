@@ -8,4 +8,7 @@ module.exports = function (grunt) {
         builddir: 'build'
     });
 
+    grunt.registerTask('default', 'Default task', function() {
+       grunt.log.write('Logging some stuff...').ok();
+    });
 }
