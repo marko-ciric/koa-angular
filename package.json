@@ -11,7 +11,11 @@
         "koa-response-time": "*",
         "koa-session": "*",
         "koa-error": "*",
+        "koa-rewrite": "*",
+        "koa-compose": "*",
         "co-views": "*",
+        "co-body": "*",
+        "pswd": "*",
         "less-middleware": "*",
         "grunt-contrib": "*",
         "mongoose": "*"
