@@ -1,17 +1,22 @@
 {
-  "name": "instagram-feed",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "node app.js"
-  },
-  "dependencies": {
-    "koa": "*",
-    "less-middleware": "*",
-    "grunt-contrib": "*",
-    "mongoose": "*"
-  },
-  "devDependencies": {
-    "grunt-bower-task": "~0.3.4"
-  }
+    "name": "instagram-feed",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "koa": "*",
+        "koa-common": "*",
+        "koa-response-time": "*",
+        "koa-session": "*",
+        "koa-error": "*",
+        "co-views": "*",
+        "less-middleware": "*",
+        "grunt-contrib": "*",
+        "mongoose": "*"
+    },
+    "devDependencies": {
+        "grunt-bower-task": "~0.3.4"
+    }
 }
