@@ -1,10 +1,9 @@
 
 var responsetime = require('koa-response-time');
+var common = require('koa-common');
+var route = require('koa-route');
 var compose = require('koa-compose');
 var koa = require('koa');
-var logger = require('koa-logger');
-
-var route = require('koa-route');
 
 var app = module.exports = koa();
 
@@ -35,5 +34,5 @@ app.use(function *(){
     this.body = 'Hello World';
 });
 
-if ()app.listen(3000);
+app.listen(3000);
 
