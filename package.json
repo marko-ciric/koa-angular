@@ -12,8 +12,9 @@
         "koa-session": "*",
         "koa-error": "*",
         "koa-rewrite": "*",
+        "koa-render": "*",
         "koa-compose": "*",
-        "co-views": "*",
+
         "co-body": "*",
         "pswd": "*",
         "less-middleware": "*",
