@@ -6,19 +6,20 @@
         "start": "node app.js"
     },
     "dependencies": {
+        "grunt-contrib": "*",
         "koa": "*",
-        "koa-common": "*",
+        "koa-logger": "*",
         "koa-response-time": "*",
         "koa-session": "*",
         "koa-error": "*",
         "koa-rewrite": "*",
+        "co-body": "*",
         "koa-render": "*",
         "koa-compose": "*",
 
-        "co-body": "*",
         "pswd": "*",
         "less-middleware": "*",
-        "grunt-contrib": "*",
+        "socket.io": "*",
         "mongoose": "*"
     },
     "devDependencies": {

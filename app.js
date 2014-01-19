@@ -1,27 +1,28 @@
-var responsetime = require('koa-response-time');
-var common = require('koa-common');
-var route = require('koa-route');
 var parse = require('co-body');
-var compose = require('koa-compose');
+
+var route = require('koa-route');
 var koa = require('koa');
 
+var common = require('./lib/common')
+
+var compose = require('koa-compose');
 
 var app = module.exports = koa();
 
 app.name = 'koa-angular-demo';
+
 app.env = 'development';
 
-function* responseTime(next) {
-    var start = new Date;
-    yield next;
-    var ms = new Date - start;
-    this.set('X-Response-Time', ms + 'ms');
-}
+app.use(compose([common.logger(), common.responseTime(),
+    route.get('/', function* () {
+        "use strict";
+        this.body = 'Hello world!';
+    }),
+    route.get('/users', function* () {
+        "use strict";
+        this.body = 'Hello users!';
+    })
 
-app.use(compose([responseTime, common.logger(), common.favicon(), function* (next) {
-    console.log('Requested: ', this.request.url);
-    this.body = 'Hello World';
-    yield next;
-}]));
+]));
 
 app.listen(3000);
