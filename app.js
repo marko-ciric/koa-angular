@@ -2,7 +2,11 @@ var parse = require('co-body');
 var route = require('koa-route');
 var compose = require('koa-compose');
 var common = require('./lib/common')
+var render = require('./lib/render')
 var koa = require('koa');
+
+var mongo = require('mongoose');
+var printObj = compose.printObj;
 
 var app = module.exports = koa();
 
@@ -16,6 +20,7 @@ app.use(compose([common.logger(), common.responseTime(), common.favicon(), commo
     }),
     route.get('/user', function* () {
         var object = common.printObj(this.path);
+
         this.body = object + ': Hello users!';
     }),
     route.get('/user/:action/:id', function* (action, id) {
@@ -26,6 +31,10 @@ app.use(compose([common.logger(), common.responseTime(), common.favicon(), commo
     }),
     route.get('/post/:id', function* (id) {
         this.body = id;
+    }),
+    route.get('/templates/index', function* () {
+        "use strict";
+        this.body = yield render.views('index');
     })
 ]));
 

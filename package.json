@@ -19,11 +19,13 @@
         "co-body": "*",
         "koa-render": "*",
         "koa-compose": "*",
+        "then-jade": "*",
 
         "pswd": "*",
         "less-middleware": "*",
         "socket.io": "*",
-        "mongoose": "*"
+        "mongoose": "*",
+        "pg": "*"
     },
     "devDependencies": {
         "grunt-bower-task": "~0.3.4"
