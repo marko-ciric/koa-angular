@@ -34,7 +34,7 @@ app.use(compose([common.logger(), common.responseTime(), common.favicon(), commo
     }),
     route.get('/templates/index', function* () {
         "use strict";
-        this.body = yield render.views('index');
+        this.body = yield render('index', {title: 'Hello Jade!'});
     })
 ]));
 
