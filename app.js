@@ -1,8 +1,8 @@
 var parse = require('co-body');
 var route = require('koa-route');
 var compose = require('koa-compose');
-var common = require('./lib/common')
-var render = require('./lib/render')
+var common = require('./js/common')
+var render = require('./js/render')
 var koa = require('koa');
 
 var mongo = require('mongoose');
@@ -34,7 +34,14 @@ app.use(compose([common.logger(), common.responseTime(), common.favicon(), commo
     }),
     route.get('/templates/index', function* () {
         "use strict";
-        this.body = yield render('index', {title: 'Hello Jade!'});
+        this.body = yield render('index',
+            {
+                title: 'User photos',
+                users: [
+                    {name: 'milica', surname: 'zrnic', photos: [{name: 'photo1'}]},
+                    {name: 'marko', surname: 'ciric',  photos: [{name: 'photo2'}, {name: 'photo3'}]}
+                ]
+        });
     })
 ]));
 
