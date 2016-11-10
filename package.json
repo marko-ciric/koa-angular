@@ -1,33 +1,36 @@
 {
-    "name": "instagram-feed",
-    "version": "0.0.1",
-    "private": true,
-    "scripts": {
-        "start": "node app.js"
-    },
-    "dependencies": {
-        "grunt-contrib": "*",
-        "koa": "*",
-        "koa-logger": "*",
-        "koa-response-time": "*",
-        "koa-session": "*",
-        "koa-error": "*",
-        "koa-rewrite": "*",
-        "koa-mount": "*",
-        "koa-favicon": "*",
-        "koa-compress": "*",
-        "co-body": "*",
-        "koa-render": "*",
-        "koa-compose": "*",
-        "then-jade": "*",
-
-        "pswd": "*",
-        "less-middleware": "*",
-        "socket.io": "*",
-        "mongoose": "*",
-        "pg": "*"
-    },
-    "devDependencies": {
-        "grunt-bower-task": "~0.3.4"
-    }
+  "name": "instagram-feed",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "dependencies": {
+    "grunt-contrib": "*",
+    "koa": "*",
+    "koa-logger": "*",
+    "koa-response-time": "*",
+    "koa-session": "*",
+    "koa-error": "*",
+    "koa-rewrite": "*",
+    "koa-mount": "*",
+    "koa-favicon": "*",
+    "koa-compress": "*",
+    "co-body": "*",
+    "koa-render": "*",
+    "koa-compose": "*",
+    "then-jade": "*",
+    "pswd": "*",
+    "less-middleware": "*",
+    "socket.io": "*",
+    "mongoose": "*",
+    "pg": "*",
+    "snyk": "^1.19.1"
+  },
+  "devDependencies": {
+    "grunt-bower-task": "~0.3.4"
+  },
+  "snyk": true
 }
