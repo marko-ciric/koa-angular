@@ -1,5 +1,7 @@
-version: v1.5.0
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.1
 ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:minimatch:20160620':
     - grunt-contrib > matchdep > globule > minimatch:
@@ -11,3 +13,8 @@ patch:
   'npm:uglify-js:20151024':
     - then-jade > jade > transformers > uglify-js:
         patched: '2016-11-10T22:44:38.379Z'
+  'npm:ms:20170412':
+    - socket.io > socket.io-adapter > debug > ms:
+        patched: '2017-05-25T02:07:06.585Z'
+    - socket.io > socket.io-client > debug > ms:
+        patched: '2017-05-25T02:07:06.585Z'
