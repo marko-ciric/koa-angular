@@ -27,7 +27,7 @@
     "socket.io": "*",
     "mongoose": "*",
     "pg": "*",
-    "snyk": "^1.19.1"
+    "snyk": "^1.235.1"
   },
   "devDependencies": {
     "grunt-bower-task": "~0.3.4"
